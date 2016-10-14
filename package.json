@@ -1,0 +1,19 @@
+{
+  "name": "wow-armory",
+  "version": "0.1.0",
+  "description": "Simple interface for the wow armory api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wow",
+    "armory",
+    "api"
+  ],
+  "author": "Joakim Tangnes",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.75.0"
+  }
+}
