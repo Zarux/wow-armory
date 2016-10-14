@@ -17,9 +17,9 @@ armory.setOptions({
 });
 
 armory.character({"name":"Eladurel","fields":["guild"]},function(data){
-  armory.guild({"name":data.guild.name,"fields":["news"]},function(data)){
-    console.log(data.news);
-  }
+  armory.guild({"name":data.guild.name,"fields":["news"]},function(data){
+    console.log(data);
+  });
 });
 
 ```
