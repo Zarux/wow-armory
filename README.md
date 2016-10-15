@@ -25,3 +25,7 @@ armory.character({"name":"Eladurel","fields":["guild"]},function(data){
 ```
 
 ## Documentation
+
+* [`setOptions`](DOCS.md#setOptions)
+* [`character`](DOCS.md#character)
+* [`guild`](DOCS.md#guild)
