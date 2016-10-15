@@ -294,7 +294,7 @@ armory.boss({"id":91331},function(err,data){
 
 <a name="mounts" />
 
-### mounts(options,callback)
+### mounts([options],callback)
 
 __Arguments__
 
@@ -346,7 +346,7 @@ armory.quest({"id":44033},function(err,data){
 
 <a name="zone_list" />
 
-### zone_list(options,callback)
+### zone_list([options],callback)
 
 __Arguments__
 
@@ -414,7 +414,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="realm_status" />
 
-### realm_status(options,callback)
+### realm_status([options],callback)
 
 __Arguments__
 
@@ -484,7 +484,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="chl_rlm_leaderboard" />
 
-### chl_rlm_leaderboard(options,callback)
+### chl_rlm_leaderboard([options],callback)
 
 __Arguments__
 
@@ -507,7 +507,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="chl_rgn_leaderboard" />
 
-### chl_rgn_leaderboard(options,callback)
+### chl_rgn_leaderboard([options],callback)
 
 __Arguments__
 
@@ -530,7 +530,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="pet_list" />
 
-### pet_list(options,callback)
+### pet_list([options],callback)
 
 __Arguments__
 
@@ -621,7 +621,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="battlegroups" />
 
-### battlegroups(options,callback)
+### battlegroups([options],callback)
 
 __Arguments__
 
@@ -643,7 +643,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="races" />
 
-### races(options,callback)
+### races([options],callback)
 
 __Arguments__
 
@@ -665,7 +665,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="classes" />
 
-### classes(options,callback)
+### classes([options],callback)
 
 __Arguments__
 
@@ -687,7 +687,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="char_achievements" />
 
-### char_achievements(options,callback)
+### char_achievements([options],callback)
 
 __Arguments__
 
@@ -709,7 +709,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="guild_rewards" />
 
-### guild_rewards(options,callback)
+### guild_rewards([options],callback)
 
 __Arguments__
 
@@ -731,7 +731,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="guild_perks" />
 
-### guild_perks(options,callback)
+### guild_perks([options],callback)
 
 __Arguments__
 
@@ -753,7 +753,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="guild_achievements" />
 
-### guild_achievements(options,callback)
+### guild_achievements([options],callback)
 
 __Arguments__
 
@@ -775,7 +775,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="item_classes" />
 
-### item_classes(options,callback)
+### item_classes([options],callback)
 
 __Arguments__
 
@@ -797,7 +797,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="talents" />
 
-### talents(options,callback)
+### talents([options],callback)
 
 __Arguments__
 
@@ -819,7 +819,7 @@ var armory = require("wow-armory");
 ---------------------------------------
 <a name="pet_types" />
 
-### pet_types(options,callback)
+### pet_types([options],callback)
 
 __Arguments__
 
