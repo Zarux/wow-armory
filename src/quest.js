@@ -1,4 +1,4 @@
-var utils = require("./util.js");
+var utils    = require("./util.js");
 var _globals = utils._globals;
 
 var quest = function(options,cb){

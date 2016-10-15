@@ -1,4 +1,4 @@
-var utils = require("./util.js");
+var utils    = require("./util.js");
 var _globals = utils._globals;
 
 var auction = function(options,cb){
@@ -17,5 +17,5 @@ var auction = function(options,cb){
 };
 
 module.exports = {
-	"auction":auction
+	"auction" : auction
 }

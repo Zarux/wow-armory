@@ -1,6 +1,6 @@
 # Documentation
 
-* [`setOptions`](#setOptions)
+* [`set_options`](#set_options)
 * [`character`](#character)
 * [`guild`](#guild)
 * [`achievement`](#achievement)
@@ -15,8 +15,8 @@
 
 ---------------------------------------
 
-<a name="setOptions" />
-### setOptions(options)
+<a name="set_options" />
+### set_options(options)
 
 Sets global options for the armory
 
@@ -31,7 +31,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-armory.setOptions({
+armory.set_options({
   "region" : "eu",
   "realm"  : "bladefist",
   "apikey" : "xxxxxxxxxxxxxxxxx"
@@ -48,7 +48,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`,`region`,`realm`,`name`,`fields`
-    * `apikey`,`region`,`realm` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey`,`region`,`realm` can be set in global options with [`set_options`](#set_options)
     * `fields` is either a string with format "field,field" or an array of fields.
       * `fields` can be zero or multiple of : `achievments,appearance,feed,guild,hunterPets,items,mounts,pets,petSlots,professions,progression,pvp,quests,reputation,statistics,stats,talents,titles,audit`
 
@@ -60,7 +60,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.character({"name":"Eladurel","fields":["guild"]},function(err,data){
   if(err) return console.log(err);
   console.log(data);
@@ -78,7 +78,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`,`region`,`realm`,`name`,`fields`
-    * `apikey`,`region`,`realm` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey`,`region`,`realm` can be set in global options with [`set_options`](#set_options)
     * `fields` is either a string with format "field,field" or an array of fields.
       * `fields` can be zero or multiple of : `members,achievements,news,challenge`
 
@@ -90,7 +90,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.guild({"name":"The Art of Dying","fields":["news"]},function(err,data){
   if(err) return console.log(err);
   console.log(data);
@@ -107,7 +107,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`,`id`
-    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey` can be set in global options with [`set_options`](#set_options)
     * `id` is the achievement id
  
 * `callback(err,data)`: A callback called when the data is ready 
@@ -118,7 +118,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.achievement({"id":10457},function(err,data){
   if(err) return console.log(err);
   console.log(data);
@@ -136,7 +136,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`,`id`
-    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey` can be set in global options with [`set_options`](#set_options)
     * `id` is the item id
  
 * `callback(err,data)`: A callback called when the data is ready 
@@ -147,7 +147,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.item({"id":118937},function(err,data){
   if(err) return console.log(err);
   console.log(data);
@@ -165,7 +165,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`,`id`
-    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey` can be set in global options with [`set_options`](#set_options)
     * `id` is the item set id
  
 * `callback(err,data)`: A callback called when the data is ready 
@@ -176,7 +176,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.item_set({"id":699},function(err,data){
   if(err) return console.log(err);
   console.log(data);
@@ -194,7 +194,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`
-    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey` can be set in global options with [`set_options`](#set_options)
  
 * `callback(err,data)`: A callback called when the data is ready 
   * `err`  is either null or string with error
@@ -204,7 +204,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.auction(function(err,data){
   if(err) return console.log(err);
   console.log(data);
@@ -222,7 +222,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`
-    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey` can be set in global options with [`set_options`](#set_options)
  
 * `callback(err,data)`: A callback called when the data is ready 
   * `err`  is either null or string with error
@@ -232,7 +232,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.boss_list(function(err,data){
   if(err) return console.log(err);
   console.log(data);
@@ -250,7 +250,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`,`id`
-    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey` can be set in global options with [`set_options`](#set_options)
     * `id` is the boss id
  
 * `callback(err,data)`: A callback called when the data is ready 
@@ -261,7 +261,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.boss({"id":91331},function(err,data){
   if(err) return console.log(err);
   console.log(data);
@@ -279,7 +279,7 @@ __Arguments__
 
 * `options`: Options object
   * Valid options are : `apikey`,`id`
-    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `apikey` can be set in global options with [`set_options`](#set_options)
     * `id` is the quest id
  
 * `callback(err,data)`: A callback called when the data is ready 
@@ -290,7 +290,7 @@ __Example__
 
 ```js
 var armory = require("wow-armory");
-//setOptions...
+//set_options...
 armory.quest({"id":44033},function(err,data){
   if(err) return console.log(err);
   console.log(data);

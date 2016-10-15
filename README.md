@@ -10,7 +10,7 @@ npm install wow-armory
 ## Example Usage
 ```js
 var armory = require("wow-armory");
-armory.setOptions({
+armory.set_options({
   "region":"eu",
   "realm":"bladefist",
   "apikey":"xxxxxxxx"
@@ -26,7 +26,7 @@ armory.character({"name":"Eladurel","fields":["guild"]},function(data){
 
 ## Documentation
 
-* [`setOptions`](DOCS.md#setOptions)
+* [`set_options`](DOCS.md#set_options)
 * [`character`](DOCS.md#character)
 * [`guild`](DOCS.md#guild)
 * [`achievement`](DOCS.md#achievement)

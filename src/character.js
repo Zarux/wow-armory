@@ -1,4 +1,4 @@
-var utils = require("./util.js");
+var utils    = require("./util.js");
 var _globals = utils._globals;
 
 var character = function(options,cb){
@@ -12,5 +12,5 @@ var character = function(options,cb){
 };
 
 module.exports = {
-	"character":character
+	"character" : character
 }

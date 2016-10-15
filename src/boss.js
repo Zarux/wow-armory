@@ -1,4 +1,4 @@
-var utils = require("./util.js");
+var utils    = require("./util.js");
 var _globals = utils._globals;
 
 var boss_list = function(options,cb){
@@ -21,6 +21,6 @@ var boss = function(options,cb){
 }
 
 module.exports = {
-	"boss_list":boss_list,
-	"boss":boss
+	"boss_list" : boss_list,
+	"boss"      : boss
 }

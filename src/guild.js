@@ -1,4 +1,4 @@
-var utils = require("./util.js");
+var utils    = require("./util.js");
 var _globals = utils._globals;
 
 var guild = function(options,cb){
