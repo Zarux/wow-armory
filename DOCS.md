@@ -7,7 +7,7 @@
 ---------------------------------------
 
 <a name="setOptions" />
-### armory.setOptions(options)
+### setOptions(options)
 
 Sets global options for the armory
 
@@ -31,7 +31,7 @@ armory.setOptions({
 ---------------------------------------
 
 <a name="character" />
-### armory.character(options,[callback])
+### character(options,callback)
 
 Gets character data from armory
 
@@ -43,7 +43,9 @@ __Arguments__
     * `fields` is either a string with format "field,field" or an array of fields.
       * `fields` can be one or multiple of : `achievments,appearance,feed,guild,hunterPets,items,mounts,pets,petSlots,professions,progression,pvp,quests,reputation,statistics,stats,talents,titles,audit`
 
-* `callback(err,data)`: A callback called when the data is ready
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
@@ -58,7 +60,7 @@ armory.character({"name":"Eladurel","fields":["guild"]},function(err,data){
 ---------------------------------------
 
 <a name="guild" />
-### armory.guild(options,[callback])
+### guild(options,callback)
 
 Gets guild data from armory
 
@@ -70,7 +72,9 @@ __Arguments__
     * `fields` is either a string with format "field,field" or an array of fields.
       * `fields` can be one or multiple of : `members,achievements,news,challenge`
 
-* `callback(err,data)`: A callback called when the data is ready
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
