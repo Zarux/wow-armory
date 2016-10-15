@@ -43,7 +43,7 @@ var pet_types 		    = require("./src/data_resources.js" ).pet_types;
 module.exports = {
 	"character"           : character,
 	"guild"               : guild,
-	"set_options"          : set_options,
+	"set_options"         : set_options,
 	"achievement"         : achievement,
 	"item"                : item,
 	"item_set"            : item_set,
