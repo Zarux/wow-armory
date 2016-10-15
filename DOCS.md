@@ -298,6 +298,14 @@ armory.boss({"id":91331},function(err,data){
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -342,6 +350,14 @@ armory.quest({"id":44033},function(err,data){
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -355,6 +371,15 @@ var armory = require("wow-armory");
 ### zone(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`,`id`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+    * `id` is the zone id
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
@@ -370,6 +395,15 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`,`id`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+    * `id` is the spell id
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -383,6 +417,15 @@ var armory = require("wow-armory");
 ### realm_status(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`,`region`
+    * `apikey`,`region` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+  
 
 __Example__
 
@@ -398,6 +441,15 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`,`id`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+    * `id` is the recipe id
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -411,6 +463,16 @@ var armory = require("wow-armory");
 ### pvp_leaderboard(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`,`bracket`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+    * `bracket` is the bracket (2v2, 3v3, 5v5)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 
 __Example__
 
@@ -426,6 +488,15 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`,`realm`
+    * `apikey`,`realm` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+  
+
 __Example__
 
 ```js
@@ -439,6 +510,15 @@ var armory = require("wow-armory");
 ### chl_rgn_leaderboard(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`,`region`
+    * `apikey`,`region` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+  
 
 __Example__
 
@@ -454,6 +534,14 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -467,6 +555,15 @@ var armory = require("wow-armory");
 ### pet_abilities(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`,`id`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+    * `id` is the ability id
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
@@ -482,6 +579,15 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`,`id`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+    * `id` is the species id
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -495,6 +601,15 @@ var armory = require("wow-armory");
 ### pet_species_stats(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`,`id`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+    * `id` is the species id
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
@@ -510,6 +625,14 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`,`region`
+    * `apikey`,`region` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -523,6 +646,14 @@ var armory = require("wow-armory");
 ### races(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
@@ -538,6 +669,14 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -551,6 +690,14 @@ var armory = require("wow-armory");
 ### char_achievements(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
@@ -566,6 +713,14 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -579,6 +734,14 @@ var armory = require("wow-armory");
 ### guild_perks(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
@@ -594,6 +757,14 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -607,6 +778,14 @@ var armory = require("wow-armory");
 ### item_classes(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
@@ -622,6 +801,14 @@ var armory = require("wow-armory");
 
 __Arguments__
 
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
 __Example__
 
 ```js
@@ -635,6 +822,14 @@ var armory = require("wow-armory");
 ### pet_types(options,callback)
 
 __Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`
+    * `apikey` can be set in global options with [`set_options`](#set_options)
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
 
 __Example__
 
