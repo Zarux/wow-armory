@@ -11,6 +11,28 @@
 * [`boss`](#boss)
 * [`mounts`](#mounts)
 * [`quest`](#quest)
+* [`zone_list`](#zone_list)
+* [`zone`](#zone)
+* [`spell`](#spell)
+* [`realm_status`](#realm_status)
+* [`recipe`](#recipe)
+* [`pvp_leaderboard`](#pvp_leaderboard)
+* [`chl_rlm_leaderboard`](#chl_rlm_leaderboard)
+* [`chl_rgn_leaderboard`](#chl_rgn_leaderboard)
+* [`pet_list`](#pet_list)
+* [`pet_abilities`](#pet_abilities)
+* [`pet_species`](#pet_species)
+* [`pet_species_stats`](#pet_species_stats)
+* [`battlegroups`](#battlegroups)
+* [`races`](#races)
+* [`classes`](#classes)
+* [`char_achievements`](#char_achievements)
+* [`guild_rewards`](#guild_rewards)
+* [`guild_perks`](#guild_perks)
+* [`guild_achievements`](#guild_achievements)
+* [`item_classes`](#item_classes)
+* [`talents`](#talents)
+* [`pet_types`](#pet_types)
 
 
 ---------------------------------------
@@ -295,6 +317,315 @@ armory.quest({"id":44033},function(err,data){
   if(err) return console.log(err);
   console.log(data);
 });
+```
+
+---------------------------------------
+
+<a name="zone_list" />
+
+### zone_list(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="zone" />
+
+### zone(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="spell" />
+
+### spell(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="realm_status" />
+
+### realm_status(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="recipe" />
+
+### recipe(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="pvp_leaderboard" />
+
+### pvp_leaderboard(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="chl_rlm_leaderboard" />
+
+### chl_rlm_leaderboard(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="chl_rgn_leaderboard" />
+
+### chl_rgn_leaderboard(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="pet_list" />
+
+### pet_list(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="pet_abilities" />
+
+### pet_abilities(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="pet_species" />
+
+### pet_species(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="pet_species_stats" />
+
+### pet_species_stats(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="battlegroups" />
+
+### battlegroups(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="races" />
+
+### races(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="classes" />
+
+### classes(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="char_achievements" />
+
+### char_achievements(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="guild_rewards" />
+
+### guild_rewards(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="guild_perks" />
+
+### guild_perks(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="guild_achievements" />
+
+### guild_achievements(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="item_classes" />
+
+### item_classes(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="talents" />
+
+### talents(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+<a name="pet_types" />
+
+### pet_types(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
 ```
 
 ---------------------------------------
