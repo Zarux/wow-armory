@@ -14,16 +14,17 @@ var setOptions = function(options){
 };
 
 var character = function(options,cb){
-	url = gen_url(options);
+	url = gen_url(options,"character");
 	if(Array.isArray(options.fields)){
 		options.fields = options.fields.join(",");
 	}
 	url = url.replace(":fields:",encodeURIComponent(options.fields));
+
 	do_request(url,cb);
 };
 
 var guild = function(options,cb){
-	url = gen_url(options);
+	url = gen_url(options,"guild");
 	if(Array.isArray(options.fields)){
 		options.fields = options.fields.join(",");
 	}
@@ -32,8 +33,8 @@ var guild = function(options,cb){
 };
 
 var achievement = function(options,cb){
-	var apikey_p = options.apikey   || _globals.apikey   || er("No apikey");
-	var id       = options.id       ||                      er("No id");
+	var apikey_p = options.apikey   || _globals.apikey   || cb("No apikey");
+	var id       = options.id       ||                      cb("No id");
 
 	var baseUrl = "https://eu.api.battle.net/wow/achievement/:id:?locale=en_GB&apikey=:apikey:";
 	var url = baseUrl.replace(":id:",id).replace(":apikey:",apikey_p);
@@ -41,8 +42,8 @@ var achievement = function(options,cb){
 }
 
 var item = function(options,cb){
-	var apikey_p = options.apikey   || _globals.apikey   || er("No apikey");
-	var id       = options.id       ||                      er("No id");
+	var apikey_p = options.apikey   || _globals.apikey   || cb("No apikey");
+	var id       = options.id       ||                      cb("No id");
 
 	var baseUrl = "https://eu.api.battle.net/wow/item/:id:?locale=en_GB&apikey=:apikey:";
 	var url = baseUrl.replace(":id:",id).replace(":apikey:",apikey_p);
@@ -50,22 +51,22 @@ var item = function(options,cb){
 }
 
 var item_set = function(options,cb){
-	var apikey_p = options.apikey   || _globals.apikey   || er("No apikey");
-	var id       = options.id       ||                      er("No id");
+	var apikey_p = options.apikey   || _globals.apikey   || cb("No apikey");
+	var id       = options.id       ||                      cb("No id");
 
 	var baseUrl = "https://eu.api.battle.net/wow/item/set/:id:?locale=en_GB&apikey=:apikey:";
 	var url = baseUrl.replace(":id:",id).replace(":apikey:",apikey_p);
 	do_request(url,cb);	
 }
 
-var gen_url = function(options){
+var gen_url = function(options,type){
 	var region_p = options.region   || _globals.region   || "EU";
-	var realm_p  = options.realm    || _globals.realm    || er("No realm");
-	var apikey_p = options.apikey   || _globals.apikey   || er("No apikey");
-	var name     = options.name     ||                      er("No name");
+	var realm_p  = options.realm    || _globals.realm    || cb("No realm");
+	var apikey_p = options.apikey   || _globals.apikey   || cb("No apikey");
+	var name     = options.name     ||                      cb("No name");
 
 	var url = baseUrl
-		.replace(":type:","guild")
+		.replace(":type:",type)
 		.replace(":region:",encodeURIComponent(region_p))
 		.replace(":realm:",encodeURIComponent(realm_p))
 		.replace(":name:",encodeURIComponent(name))
@@ -75,20 +76,16 @@ var gen_url = function(options){
 
 var do_request = function(url,cb){
 	request(url, function (error, response, body) {
-		if (response.statusCode == 200) {
-			var data = JSON.parse(body);
-			return cb(data);
-		}
+		var data = JSON.parse(body);
+		return cb(error,data);
 	});
-}
-
-var er = function(msg){
-	throw new Error(msg);
 }
 
 module.exports = {
 	"character":character,
 	"guild":guild,
 	"setOptions":setOptions,
-	"achievement":achievement
+	"achievement":achievement,
+	"item":item,
+	"item_set":item_set
 };
