@@ -292,6 +292,21 @@ armory.boss({"id":91331},function(err,data){
 
 ---------------------------------------
 
+<a name="mounts" />
+
+### mounts(options,callback)
+
+__Arguments__
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+//set_options...
+```
+
+---------------------------------------
+
 <a name="quest" />
 ### quest(options,callback)
 
