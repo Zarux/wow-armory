@@ -14,7 +14,7 @@ var setOptions = function(options){
 };
 
 var character = function(options,cb){
-	url = gen_url(options,"character");
+	url = gen_url(options,"character",cb);
 	if(Array.isArray(options.fields)){
 		options.fields = options.fields.join(",");
 	}
@@ -24,7 +24,7 @@ var character = function(options,cb){
 };
 
 var guild = function(options,cb){
-	url = gen_url(options,"guild");
+	url = gen_url(options,"guild",cb);
 	if(Array.isArray(options.fields)){
 		options.fields = options.fields.join(",");
 	}
@@ -33,8 +33,8 @@ var guild = function(options,cb){
 };
 
 var achievement = function(options,cb){
-	var apikey_p = options.apikey   || _globals.apikey   || cb("No apikey");
-	var id       = options.id       ||                      cb("No id");
+	var apikey_p = options.apikey   || _globals.apikey   || cb("ERROR: No apikey given");
+	var id       = options.id       ||                      cb("ERROR: No id given");
 
 	var baseUrl = "https://eu.api.battle.net/wow/achievement/:id:?locale=en_GB&apikey=:apikey:";
 	var url = baseUrl.replace(":id:",id).replace(":apikey:",apikey_p);
@@ -42,8 +42,8 @@ var achievement = function(options,cb){
 }
 
 var item = function(options,cb){
-	var apikey_p = options.apikey   || _globals.apikey   || cb("No apikey");
-	var id       = options.id       ||                      cb("No id");
+	var apikey_p = options.apikey   || _globals.apikey   || cb("ERROR: No apikey given");
+	var id       = options.id       ||                      cb("ERROR: No id given");
 
 	var baseUrl = "https://eu.api.battle.net/wow/item/:id:?locale=en_GB&apikey=:apikey:";
 	var url = baseUrl.replace(":id:",id).replace(":apikey:",apikey_p);
@@ -51,19 +51,19 @@ var item = function(options,cb){
 }
 
 var item_set = function(options,cb){
-	var apikey_p = options.apikey   || _globals.apikey   || cb("No apikey");
-	var id       = options.id       ||                      cb("No id");
+	var apikey_p = options.apikey   || _globals.apikey   || cb("ERROR: No apikey given");
+	var id       = options.id       ||                      cb("ERROR: No id given");
 
 	var baseUrl = "https://eu.api.battle.net/wow/item/set/:id:?locale=en_GB&apikey=:apikey:";
 	var url = baseUrl.replace(":id:",id).replace(":apikey:",apikey_p);
 	do_request(url,cb);	
 }
 
-var gen_url = function(options,type){
+var gen_url = function(options,type,cb){
 	var region_p = options.region   || _globals.region   || "EU";
-	var realm_p  = options.realm    || _globals.realm    || cb("No realm");
-	var apikey_p = options.apikey   || _globals.apikey   || cb("No apikey");
-	var name     = options.name     ||                      cb("No name");
+	var realm_p  = options.realm    || _globals.realm    || cb("ERROR: No realm given");
+	var apikey_p = options.apikey   || _globals.apikey   || cb("ERROR: No apikey given");
+	var name     = options.name     ||                      cb("ERROR: No name given");
 
 	var url = baseUrl
 		.replace(":type:",type)
@@ -77,7 +77,10 @@ var gen_url = function(options,type){
 var do_request = function(url,cb){
 	request(url, function (error, response, body) {
 		var data = JSON.parse(body);
-		return cb(error,data);
+		if (!error && data.status == "nok")
+			var errorMsg = "ERROR: "+data.reason;
+		if(error) errorMsg = error;
+		return cb(errorMsg,data);
 	});
 }
 
