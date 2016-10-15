@@ -16,9 +16,9 @@ armory.set_options({
   "apikey":"xxxxxxxx"
 });
 
-armory.character({"name":"Eladurel","fields":["guild"]},function(data){
-  armory.guild({"name":data.guild.name,"fields":["news"]},function(data){
-    console.log(data);
+armory.character({"name":"Eladurel","fields":["guild"]},function(err,char_data){
+  armory.guild({"name":data.guild.name,"fields":["news"]},function(err,guild_data){
+    console.log(guild_data);
   });
 });
 
