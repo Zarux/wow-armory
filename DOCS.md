@@ -3,6 +3,9 @@
 * [`setOptions`](#setOptions)
 * [`character`](#character)
 * [`guild`](#guild)
+* [`achievement`](#achievement)
+* [`item`](#item)
+
 
 ---------------------------------------
 
@@ -81,6 +84,61 @@ __Example__
 ```js
 var armory = require("wow-armory");
 armory.guild({"name":"The Art of Dying","fields":["news"]},function(err,data){
+  if(err) return console.log(err);
+  console.log(data);
+});
+```
+
+---------------------------------------
+<a name="achievement" />
+### achievement(options,callback)
+
+Gets achievement data for the given item id
+
+__Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`,`id`
+    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `id` is the achievement id
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+armory.achievement({"id":10457},function(err,data){
+  if(err) return console.log(err);
+  console.log(data);
+});
+```
+
+---------------------------------------
+
+<a name="item" />
+### item(options,callback)
+
+Gets item data for the given item id
+
+__Arguments__
+
+* `options`: Options object
+  * Valid options are : `apikey`,`id`
+    * `apikey` can be set in global options with [`setOptions`](#setOptions)
+    * `id` is the item id
+ 
+* `callback(err,data)`: A callback called when the data is ready 
+  * `err`  is either null or string with error
+  * `data` is the the data requested with given fields as keys
+
+__Example__
+
+```js
+var armory = require("wow-armory");
+armory.item({"id":118937},function(err,data){
   if(err) return console.log(err);
   console.log(data);
 });
