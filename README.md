@@ -2,7 +2,7 @@
 
 A simple interface for the wow armory
 
-## Install (not added to npm yet)
+## Install
 ```bash
 npm install wow-armory
 ```
