@@ -44,7 +44,7 @@ __Arguments__
   * Valid options are : `apikey`,`region`,`realm`,`name`,`fields`
     * `apikey`,`region`,`realm` can be set in global options with [`setOptions`](#setOptions)
     * `fields` is either a string with format "field,field" or an array of fields.
-      * `fields` can be one or multiple of : `achievments,appearance,feed,guild,hunterPets,items,mounts,pets,petSlots,professions,progression,pvp,quests,reputation,statistics,stats,talents,titles,audit`
+      * `fields` can be zero or multiple of : `achievments,appearance,feed,guild,hunterPets,items,mounts,pets,petSlots,professions,progression,pvp,quests,reputation,statistics,stats,talents,titles,audit`
 
 * `callback(err,data)`: A callback called when the data is ready 
   * `err`  is either null or string with error
@@ -73,7 +73,7 @@ __Arguments__
   * Valid options are : `apikey`,`region`,`realm`,`name`,`fields`
     * `apikey`,`region`,`realm` can be set in global options with [`setOptions`](#setOptions)
     * `fields` is either a string with format "field,field" or an array of fields.
-      * `fields` can be one or multiple of : `members,achievements,news,challenge`
+      * `fields` can be zero or multiple of : `members,achievements,news,challenge`
 
 * `callback(err,data)`: A callback called when the data is ready 
   * `err`  is either null or string with error
