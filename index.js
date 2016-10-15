@@ -12,7 +12,7 @@ var guild               = require("./src/guild.js"          ).guild;
 var achievement         = require("./src/achievement.js"    ).achievement;
 var item                = require("./src/item.js"           ).item;
 var item_set            = require("./src/item.js"           ).item_set;
-var auction             = require("./src/auction.js"        ).item_set;
+var auction             = require("./src/auction.js"        ).auction;
 var boss_list           = require("./src/boss.js"           ).boss_list;
 var boss                = require("./src/boss.js"           ).boss;
 var mounts              = require("./src/mount.js"          ).mounts;
@@ -43,7 +43,7 @@ var pet_types 		    = require("./src/data_resources.js" ).pet_types;
 module.exports = {
 	"character"           : character,
 	"guild"               : guild,
-	"setOptions"          : set_options,
+	"set_options"          : set_options,
 	"achievement"         : achievement,
 	"item"                : item,
 	"item_set"            : item_set,
