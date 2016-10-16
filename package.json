@@ -1,6 +1,6 @@
 {
   "name": "wow-armory",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "description": "Simple interface for the wow armory api",
   "main": "index.js",
   "scripts": {
