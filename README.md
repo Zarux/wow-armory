@@ -7,6 +7,11 @@ A simple interface for the wow armory
 npm install wow-armory
 ```
 
+## Notes
+
+I have not tested everything, if you find any problems/issues/bugs/whatever please open a issue on github and i will try to fix asap
+
+
 ## Example Usage
 ```js
 var armory = require("wow-armory");
