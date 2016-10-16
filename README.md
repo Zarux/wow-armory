@@ -9,7 +9,7 @@ npm install wow-armory
 
 ## Notes
 
-I have not tested everything, if you find any problems/issues/bugs/whatever please open a issue on github and i will try to fix asap
+I have not tested everything, if you find any problems/issues/bugs/whatever please open an issue on github and i will try to fix it asap
 
 
 ## Example Usage
