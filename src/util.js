@@ -25,10 +25,12 @@ var gen_url = function(options,type,cb){
 
 var do_request = function(url,cb){
 	request(url, function (error, response, body) {
+		console.log(url);
+		var data = JSON.parse(body);
 		if (!error && data.status == "nok")
 			var errorMsg = "ERROR: "+data.reason;
 		if(error) errorMsg = error;
-		var data = JSON.parse(body);
+		
 		return cb(errorMsg,data);
 	});
 }
