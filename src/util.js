@@ -26,6 +26,7 @@ var gen_url = function(options,type,cb){
 var do_request = function(url,cb){
 	request(url, function (error, response, body) {
 		var data = JSON.parse(body);
+		var errorMsg = null;
 		if (!error && data.status == "nok")
 			var errorMsg = "ERROR: "+data.reason;
 		if(error) errorMsg = error;
