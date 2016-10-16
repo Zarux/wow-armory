@@ -8,7 +8,7 @@ var realm_status = function(options,cb){
 	if (typeof options == "function") cb = options;
 
 	var baseUrl = "https://:region:.api.battle.net/wow/realm/status?locale=en_GB&apikey=:apikey:";
-	var url = baseUrl.replace(":apikey:",apikey_p).replace(":region",region_p);
+	var url = baseUrl.replace(":apikey:",apikey_p).replace(":region:",region_p);
 	utils.do_request(url,cb);
 }
 
