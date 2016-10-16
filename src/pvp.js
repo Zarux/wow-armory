@@ -10,7 +10,7 @@ var leaderboard = function(options,cb){
 	var url = baseUrl
 		.replace(":bracket:",bracket)
 		.replace(":apikey:",apikey_p)
-		.replace(":region",region_p);
+		.replace(":region:",region_p);
 	utils.do_request(url,cb);
 }
 
