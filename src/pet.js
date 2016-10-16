@@ -33,7 +33,7 @@ var pet_species = function(options,cb){
 	utils.do_request(url,cb);
 }
 
-var pet_species_stat = function(options,cb){
+var pet_species_stats = function(options,cb){
 	var apikey_p = options.apikey   || _globals.apikey   || cb("ERROR: No apikey given");
 	var id       = options.id       ||                      cb("ERROR: No id given");
 	
@@ -48,5 +48,5 @@ module.exports = {
 	"pet_list"          : pet_list,
 	"pet_abilities"     : pet_abilities,
 	"pet_species"       : pet_species,
-	"pet_species_stat"  : pet_species_stat
+	"pet_species_stats"  : pet_species_stats
 }
