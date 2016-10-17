@@ -465,9 +465,9 @@ var armory = require("wow-armory");
 __Arguments__
 
 * `options`: Options object
-  * Valid options are : `apikey`,`bracket`
-    * `apikey` can be set in global options with [`set_options`](#set_options)
-    * `bracket` is the bracket (2v2, 3v3, 5v5)
+  * Valid options are : `apikey`,`region`,`bracket`
+    * `apikey`,`region` can be set in global options with [`set_options`](#set_options)
+    * `bracket` is the bracket (2v2, 3v3, 5v5, rbg)
  
 * `callback(err,data)`: A callback called when the data is ready 
   * `err`  is either null or string with error
