@@ -2,7 +2,8 @@ var utils = require("./util.js");
 var _globals = utils._globals;
 
 var guild = function (options, cb) {
-    url = utils.gen_url(options, "guild", cb);
+    var url = utils.gen_url(options, "guild", cb);
+    if(!url) return;
     if (Array.isArray(options.fields)) {
         options.fields = options.fields.join(",");
     }

@@ -9,13 +9,22 @@ var _globals = {
 
 var gen_url = function (options, type, cb) {
     var region_p = options.region || _globals.region || "EU";
-    var realm_p = options.realm || _globals.realm || cb("ERROR: No realm given");
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
-    var name = options.name || cb("ERROR: No name given");
+    var realm_p = options.realm || _globals.realm || false;
+    var apikey_p = options.apikey || _globals.apikey || false;
+    var name = options.name || false;
 
-    if (!realm_p) return cb("ERROR: No realm given");
-    if (!apikey_p) return cb("ERROR: No apikey given");
-    if (!name) return cb("ERROR: No name given");
+    if (!realm_p){
+        cb("ERROR: No realm given");
+        return false;
+    }
+    if (!apikey_p){
+        cb("ERROR: No apikey given");
+        return false;
+    }
+    if (!name){
+        cb("ERROR: No name given");
+        return false;
+    }
 
     var baseUrl = "https://:region:.api.battle.net/wow/:type:/:realm:/:name:?locale=en_GB&apikey=:apikey:&fields=:fields:";
     return baseUrl

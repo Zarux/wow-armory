@@ -2,7 +2,8 @@ var utils = require("./util.js");
 var _globals = utils._globals;
 
 var pet_list = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -13,8 +14,10 @@ var pet_list = function (options, cb) {
 
 
 var pet_abilities = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
-    var id = options.id || cb("ERROR: No id given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
+    var id = options.id || false;
+    if(!id) return cb("ERROR: No id given");
 
     if (typeof options == "function") cb = options;
 
@@ -25,8 +28,10 @@ var pet_abilities = function (options, cb) {
 
 
 var pet_species = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
-    var id = options.id || cb("ERROR: No id given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
+    var id = options.id || false;
+    if(!id) return cb("ERROR: No id given");
 
     if (typeof options == "function") cb = options;
 
@@ -37,8 +42,10 @@ var pet_species = function (options, cb) {
 
 
 var pet_species_stats = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
-    var id = options.id || cb("ERROR: No id given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
+    var id = options.id || false;
+    if(!id) return cb("ERROR: No id given");
 
     if (typeof options == "function") cb = options;
 

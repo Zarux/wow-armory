@@ -2,7 +2,8 @@ var utils = require("./util.js");
 var _globals = utils._globals;
 
 var mounts = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 

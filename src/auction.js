@@ -3,8 +3,11 @@ var _globals = utils._globals;
 
 var auction = function (options, cb) {
     var region_p = options.region || _globals.region || "EU";
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
-    var realm_p = options.realm || _globals.realm || cb("ERROR: No realm given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    var realm_p = options.realm || _globals.realm || false;
+
+    if (!realm_p) return cb("ERROR: No realm given");
+    if (!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 

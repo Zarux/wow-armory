@@ -3,7 +3,8 @@ var _globals = utils._globals;
 
 var battlegroups = function (options, cb) {
     var region_p = options.region || _globals.region || "EU";
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -14,7 +15,8 @@ var battlegroups = function (options, cb) {
 
 
 var races = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -25,7 +27,8 @@ var races = function (options, cb) {
 
 
 var classes = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -36,7 +39,8 @@ var classes = function (options, cb) {
 
 
 var char_achievements = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -47,7 +51,8 @@ var char_achievements = function (options, cb) {
 
 
 var guild_rewards = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -58,7 +63,8 @@ var guild_rewards = function (options, cb) {
 
 
 var guild_perks = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -69,7 +75,8 @@ var guild_perks = function (options, cb) {
 
 
 var guild_achievements = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -80,7 +87,8 @@ var guild_achievements = function (options, cb) {
 
 
 var item_classes = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -91,7 +99,8 @@ var item_classes = function (options, cb) {
 
 
 var talents = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
@@ -102,7 +111,8 @@ var talents = function (options, cb) {
 
 
 var pet_types = function (options, cb) {
-    var apikey_p = options.apikey || _globals.apikey || cb("ERROR: No apikey given");
+    var apikey_p = options.apikey || _globals.apikey || false;
+    if(!apikey_p) return cb("ERROR: No apikey given");
 
     if (typeof options == "function") cb = options;
 
