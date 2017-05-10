@@ -37,7 +37,7 @@ var gen_url = function (options, type, cb) {
 
 var do_request = function (url, cb) {
     request(url, function (error, response, body) {
-        if(response !== 200){
+        if(response && response.statusCode !== 200){
             cb("ERROR: HTTP RESPONSE "+response);
             return;
         }
